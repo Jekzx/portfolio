@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currículo - Gabriel Rodrigues</title>
+    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Cherry+Cream+Soda&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "IBM Plex Mono", monospace;
+            background-color: #000;
+            color: #fff6d3; /* Azul Claro */
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-shadow: 2px 2px 5px #f9a875; /* Azul Mais Claro */
+            margin: 20px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            color: #f9a875; /* Azul Claro */
+            margin-bottom: 10px;
+        }
+
+        .skills ul, .education ul, .experience ul {
+            list-style-type: none;
+        }
+
+        .skills li, .education li, .experience li {
+            background: #333;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skills li:hover, .education li:hover, .experience li:hover {
+            transform: scale(1.05);
+            background-color: #eb6b6f; /* Azul Claro */
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #7c3f58; /* Azul Claro */
+            color: #000;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .language-switcher:hover {
+            background-color: #eb6b6f; /* Azul Escuro */
+        }
+
+        .content-wrapper {
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .experience li {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skills li, .education li {
+            background-color: #222;
+        }
+        .skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skills-column {
+    flex: 1;
+}
+
+.skills-column h3 {
+    color: #f9a875; /* Ajuste o título da seção */
+    margin-bottom: 10px;
+}
+
+.skills li {
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <button class="language-switcher" onclick="switchLanguage()">EN/PT</button>
+
+    <div class="container content-wrapper">
+        <header>
+            <h1 id="name">Gabriel Rodrigues</h1>
+            <h2 id="tagline">Desenvolvedor de Software e Especialista em TI</h2>
+        </header>
+
+        <section class="section">
+            <h2 id="experience-title">Experiência</h2>
+            <ul class="experience">
+                <li>
+                    <h3 id="job-title-1">Técnico de TI</h3>
+                    <p id="job-description-1">Gerenciamento de redes, instalação de software, suporte técnico.</p>
+                    <p id="job-company-1">JGM Serviços - Rio de Janeiro</p>
+                    <p id="job-duration-1">Setembro de 2022 - Março de 2023</p>
+                </li>
+                <li>
+                    <h3 id="job-title-2">Estagiário de TI</h3>
+                    <p id="job-description-2">Suporte a hardware e software, manutenção de sistemas.</p>
+                    <p id="job-company-2">Clínicas Reunidas São Víctor</p>
+                    <p id="job-duration-2">Agosto de 2021 - Fevereiro de 2022</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 id="skills-title">Habilidades</h2>
+            <div class="skills-container">
+                <div class="skills-column">
+                    <h3>Hard Skills</h3>
+                    <ul class="skills">
+                        <li id="skill-1">Programação em C#, Java, JavaScript</li>
+                        <li id="skill-2">MySQL e SQL Server</li>
+                        <li id="skill-3">MySQL e SQL Server</li>
+                        <li id="skill-4">MySQL e SQL Server</li>
+                        <li id="skill-5">MySQL e SQL Server</li>
+                        <li id="skill-6">MySQL e SQL Server</li>
+                        <li id="skill-7">MySQL e SQL Server</li>
+                    </ul>
+                </div>
+                <div class="skills-column">
+                    <h3>Soft Skills</h3>
+                    <ul class="skills">
+                        <li id="skill-8">Diagnóstico e Resolução de Problemas</li>
+                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="section">
+            <h2 id="education-title">Educação</h2>
+            <ul class="education">
+                <li>
+                    <h3 id="degree-title-1">Graduação em Análise e Desenvolvimento de Sistemas</h3>
+                    <p id="degree-institution-1">UniBF</p>
+                    <p id="degree-duration-1">2022 - 2024</p>
+                </li>
+                    <li>
+                        <h3 id="degree-title-2">Análise de Dados do Google</h3>
+                        <p id="degree-institution-2">Google - Coursera</p>
+                        <p id="degree-description-2">Desenvolvi habilidades em análise de dados, incluindo conceitos de dados, SQL, visualização com Tableau, e programação em R. Aprendi a organizar, limpar e preparar dados para análise, aplicar soluções de problemas baseadas em dados e comunicar insights de forma eficaz.</p>
+                        <p id="degree-duration-2">2024</p>
+                    </li>
+                    <li>
+                        <h3 id="degree-title-3">Fundamentos do Suporte Técnico (Google)</h3>
+                        <p id="degree-institution-3">Google - Coursera</p>
+                        <p id="degree-description-3">Desenvolvi habilidades essenciais para uma função de suporte de TI, abrangendo tópicos como hardware, sistemas operacionais (Windows e Linux), redes de computadores, administração de sistemas e segurança de TI. Aprendi a solucionar problemas técnicos, gerenciar infraestrutura, usar ferramentas de rede e segurança, e aplicar metodologias para garantir a proteção e continuidade dos serviços de TI.</p>
+                        <p id="degree-duration-3">2024</p>
+                    </li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        let language = 'pt';
+
+        const translations = {
+            pt: {
+                experienceTitle: "Experiência",
+                job1Title: "Técnico de TI",
+                job1Description: "Gerenciamento de redes, instalação de software, suporte técnico.",
+                job1Company: "JGM Serviços - Rio de Janeiro",
+                job1Duration: "Setembro de 2022 - Março de 2023",
+                job2Title: "Estagiário de TI",
+                job2Description: "Suporte a hardware e software, manutenção de sistemas.",
+                job2Company: "Clínicas Reunidas São Víctor",
+                job2Duration: "Agosto de 2021 - Fevereiro de 2022",
+                skillsTitle: "Habilidades",
+                skill1: "Diagnóstico e Resolução de Problemas",
+                skill2: "Suporte Técnico e Atendimento ao Cliente",
+                skill3: "Programação em C#, Java, JavaScript",
+                skill4: "MySQL e SQL Server",
+                educationTitle: "Educação",
+                degreeTitle1: "Graduação em Análise e Desenvolvimento de Sistemas",
+                degreeInstitution1: "Universidade XYZ",
+                degreeDuration1: "2019 - 2023"
+            },
+            en: {
+                experienceTitle: "Experience",
+                job1Title: "IT Technician",
+                job1Description: "Network management, software installation, technical support.",
+                job1Company: "JGM Services - Rio de Janeiro",
+                job1Duration: "September 2022 - March 2023",
+                job2Title: "IT Intern",
+                job2Description: "Hardware and software support, system maintenance.",
+                job2Company: "Clínicas Reunidas São Víctor",
+                job2Duration: "August 2021 - February 2022",
+                skillsTitle: "Skills",
+                skill1: "Problem Diagnosis and Resolution",
+                skill2: "Technical Support and Customer Service",
+                skill3: "Programming in C#, Java, JavaScript",
+                skill4: "MySQL and SQL Server",
+                educationTitle: "Education",
+                degreeTitle1: "Bachelor's in System Analysis and Development",
+                degreeInstitution1: "XYZ University",
+                degreeDuration1: "2019 - 2023"
+            }
+        };
+
+        function switchLanguage() {
+            language = (language === 'pt') ? 'en' : 'pt';
+            updateContent();
+        }
+
+        function updateContent() {
+            document.getElementById("experience-title").textContent = translations[language].experienceTitle;
+            document.getElementById("job-title-1").textContent = translations[language].job1Title;
+            document.getElementById("job-description-1").textContent = translations[language].job1Description;
+            document.getElementById("job-company-1").textContent = translations[language].job1Company;
+            document.getElementById("job-duration-1").textContent = translations[language].job1Duration;
+            document.getElementById("job-title-2").textContent = translations[language].job2Title;
+            document.getElementById("job-description-2").textContent = translations[language].job2Description;
+            document.getElementById("job-company-2").textContent = translations[language].job2Company;
+            document.getElementById("job-duration-2").textContent = translations[language].job2Duration;
+            document.getElementById("skills-title").textContent = translations[language].skillsTitle;
+            document.getElementById("skill-1").textContent = translations[language].skill1;
+            document.getElementById("skill-2").textContent = translations[language].skill2;
+            document.getElementById("skill-3").textContent = translations[language].skill3;
+            document.getElementById("skill-4").textContent = translations[language].skill4;
+            document.getElementById("education-title").textContent = translations[language].educationTitle;
+            document.getElementById("degree-title-1").textContent = translations[language].degreeTitle1;
+            document.getElementById("degree-institution-1").textContent = translations[language].degreeInstitution1;
+            document.getElementById("degree-duration-1").textContent = translations[language].degreeDuration1;
+        }
+    </script>
+</body>
+</html>
