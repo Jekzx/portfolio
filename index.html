@@ -146,25 +146,25 @@
                 <div class="skills-column">
                     <h3>Hard Skills</h3>
                     <ul class="skills">
-                        <li id="skill-1">Programação em C#, Java, JavaScript</li>
-                        <li id="skill-2">MySQL e SQL Server</li>
-                        <li id="skill-3">MySQL e SQL Server</li>
-                        <li id="skill-4">MySQL e SQL Server</li>
-                        <li id="skill-5">MySQL e SQL Server</li>
-                        <li id="skill-6">MySQL e SQL Server</li>
-                        <li id="skill-7">MySQL e SQL Server</li>
+                        <li id="skill-1">Delphi</li>
+                        <li id="skill-2">Python</li>
+                        <li id="skill-3">Javascript</li>
+                        <li id="skill-4">C#</li>
+                        <li id="skill-5">HTML</li>
+                        <li id="skill-6">CSS</li>
+                        <li id="skill-7">PostgreeSQL, Firebird e MySQL</li>
                     </ul>
                 </div>
                 <div class="skills-column">
                     <h3>Soft Skills</h3>
                     <ul class="skills">
                         <li id="skill-8">Diagnóstico e Resolução de Problemas</li>
-                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
-                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
-                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
-                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
-                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
-                        <li id="skill-9">Suporte Técnico e Atendimento ao Cliente</li>
+                        <li id="skill-9">Resolução de Problemas Técnicos Complexos</li>
+                        <li id="skill-10">Comunicação Técnica Eficaz</li>
+                        <li id="skill-11">Capacidade de Aprendizagem Rápida</li>
+                        <li id="skill-12">Adaptação a Ambientes Dinâmicos</li>
+                        <li id="skill-13">Proatividade e Iniciativa</li>
+                        <li id="skill-14">Colaboração em Equipe Multidisciplinar</li>
                     </ul>
                 </div>
             </div>
@@ -201,6 +201,7 @@
         const translations = {
             pt: {
                 experienceTitle: "Experiência",
+                tagline: "Desenvolvedor de Software e Especialista em TI",
                 job1Title: "Técnico de TI",
                 job1Description: "Gerenciamento de redes, instalação de software, suporte técnico.",
                 job1Company: "JGM Serviços - Rio de Janeiro",
@@ -210,10 +211,20 @@
                 job2Company: "Clínicas Reunidas São Víctor",
                 job2Duration: "Agosto de 2021 - Fevereiro de 2022",
                 skillsTitle: "Habilidades",
-                skill1: "Diagnóstico e Resolução de Problemas",
-                skill2: "Suporte Técnico e Atendimento ao Cliente",
-                skill3: "Programação em C#, Java, JavaScript",
-                skill4: "MySQL e SQL Server",
+                skill1: "Delphi",
+                skill2: "Python",
+                skill3: "Javascript",
+                skill4: "C#",
+                skill5: "HTML",
+                skill6: "CSS",
+                skill7: "PostgreeSQL, Firebird e MySQL",
+                skill8: "Resolução de Problemas Técnicos Complexos",
+                skill9: "Comunicação Técnica Eficaz",
+                skill10: "Gestão de Processos e Organização",
+                skill11: "Capacidade de Aprendizagem Rápida",
+                skill12: "Adaptação a Ambientes Dinâmicos",
+                skill13: "Proatividade e Iniciativa",
+                skill14: "Colaboração em Equipe Multidisciplinar",
                 educationTitle: "Educação",
                 degreeTitle1: "Graduação em Análise e Desenvolvimento de Sistemas",
                 degreeInstitution1: "Universidade XYZ",
@@ -221,6 +232,7 @@
             },
             en: {
                 experienceTitle: "Experience",
+                tagline: "Backend Developer and IT Expert",
                 job1Title: "IT Technician",
                 job1Description: "Network management, software installation, technical support.",
                 job1Company: "JGM Services - Rio de Janeiro",
@@ -230,10 +242,20 @@
                 job2Company: "Clínicas Reunidas São Víctor",
                 job2Duration: "August 2021 - February 2022",
                 skillsTitle: "Skills",
-                skill1: "Problem Diagnosis and Resolution",
-                skill2: "Technical Support and Customer Service",
-                skill3: "Programming in C#, Java, JavaScript",
-                skill4: "MySQL and SQL Server",
+                skill1: "Delphi",
+                skill2: "Python",
+                skill3: "Javascript",
+                skill4: "C#",
+                skill5: "HTML",
+                skill6: "CSS",
+                skill7: "PostgreeSQL, Firebird and MySQL",
+                skill8: "Complex Technical Problem Solving",
+                skill9: "Effective Technical Communication",
+                skill10: "Process Management and Organization",
+                skill11: "Rapid Learning Ability",
+                skill12: "Adaptability to Dynamic Environments",
+                skill13: "Proactivity and Initiative",
+                skill14: "Collaboration in Cross-functional Teams",
                 educationTitle: "Education",
                 degreeTitle1: "Bachelor's in System Analysis and Development",
                 degreeInstitution1: "XYZ University",
@@ -248,6 +270,7 @@
 
         function updateContent() {
             document.getElementById("experience-title").textContent = translations[language].experienceTitle;
+            document.getElementById("tagline").textContent = translations[language].tagline;
             document.getElementById("job-title-1").textContent = translations[language].job1Title;
             document.getElementById("job-description-1").textContent = translations[language].job1Description;
             document.getElementById("job-company-1").textContent = translations[language].job1Company;
@@ -261,6 +284,16 @@
             document.getElementById("skill-2").textContent = translations[language].skill2;
             document.getElementById("skill-3").textContent = translations[language].skill3;
             document.getElementById("skill-4").textContent = translations[language].skill4;
+            document.getElementById("skill-5").textContent = translations[language].skill5;
+            document.getElementById("skill-6").textContent = translations[language].skill6;
+            document.getElementById("skill-7").textContent = translations[language].skill7;
+            document.getElementById("skill-8").textContent = translations[language].skill8;
+            document.getElementById("skill-9").textContent = translations[language].skill9;
+            document.getElementById("skill-10").textContent = translations[language].skill10;
+            document.getElementById("skill-11").textContent = translations[language].skill11;
+            document.getElementById("skill-12").textContent = translations[language].skill12;
+            document.getElementById("skill-13").textContent = translations[language].skill13;
+            document.getElementById("skill-14").textContent = translations[language].skill14;
             document.getElementById("education-title").textContent = translations[language].educationTitle;
             document.getElementById("degree-title-1").textContent = translations[language].degreeTitle1;
             document.getElementById("degree-institution-1").textContent = translations[language].degreeInstitution1;
