@@ -1,304 +1,200 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Currículo - Gabriel Rodrigues</title>
-    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Cherry+Cream+Soda&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "IBM Plex Mono", monospace;
-            background-color: #000;
-            color: #fff6d3; /* Azul Claro */
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2 {
-            text-align: center;
-            text-shadow: 2px 2px 5px #f9a875; /* Azul Mais Claro */
-            margin: 20px 0;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            font-size: 36px;
-            color: #f9a875; /* Azul Claro */
-            margin-bottom: 10px;
-        }
-
-        .skills ul, .education ul, .experience ul {
-            list-style-type: none;
-        }
-
-        .skills li, .education li, .experience li {
-            background: #333;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .skills li:hover, .education li:hover, .experience li:hover {
-            transform: scale(1.05);
-            background-color: #eb6b6f; /* Azul Claro */
-        }
-
-        .language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #7c3f58; /* Azul Claro */
-            color: #000;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .language-switcher:hover {
-            background-color: #eb6b6f; /* Azul Escuro */
-        }
-
-        .content-wrapper {
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .experience li {
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .skills li, .education li {
-            background-color: #222;
-        }
-        .skills-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.skills-column {
-    flex: 1;
-}
-
-.skills-column h3 {
-    color: #f9a875; /* Ajuste o título da seção */
-    margin-bottom: 10px;
-}
-
-.skills li {
-    margin: 5px 0;
-}
-
-    </style>
+    <title>Gabriel Rodrigues - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button class="language-switcher" onclick="switchLanguage()">EN/PT</button>
-
-    <div class="container content-wrapper">
-        <header>
-            <h1 id="name">Gabriel Rodrigues</h1>
-            <h2 id="tagline">Desenvolvedor de Software e Especialista em TI</h2>
-        </header>
-
-        <section class="section">
-            <h2 id="experience-title">Experiência</h2>
-            <ul class="experience">
-                <li>
-                    <h3 id="job-title-1">Técnico de TI</h3>
-                    <p id="job-description-1">Gerenciamento de redes, instalação de software, suporte técnico.</p>
-                    <p id="job-company-1">JGM Serviços - Rio de Janeiro</p>
-                    <p id="job-duration-1">Setembro de 2022 - Março de 2023</p>
-                </li>
-                <li>
-                    <h3 id="job-title-2">Estagiário de TI</h3>
-                    <p id="job-description-2">Suporte a hardware e software, manutenção de sistemas.</p>
-                    <p id="job-company-2">Clínicas Reunidas São Víctor</p>
-                    <p id="job-duration-2">Agosto de 2021 - Fevereiro de 2022</p>
+    <header>
+        <nav>
+            <div class="logo">
+                <span data-en="GR" data-pt="GR">GR</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-pt="Início">Home</a></li>
+                <li><a href="#about" data-en="About" data-pt="Sobre">About</a></li>
+                <li><a href="#skills" data-en="Skills" data-pt="Habilidades">Skills</a></li>
+                <li><a href="#projects" data-en="Projects" data-pt="Projetos">Projects</a></li>
+                <li><a href="#certifications" data-en="Certifications" data-pt="Certificações">Certifications</a></li>
+                <li class="language-toggle">
+                    <button onclick="toggleLanguage()" data-en="PT" data-pt="EN">PT</button>
                 </li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <section class="section">
-            <h2 id="skills-title">Habilidades</h2>
-            <div class="skills-container">
-                <div class="skills-column">
-                    <h3>Hard Skills</h3>
-                    <ul class="skills">
-                        <li id="skill-1">Delphi</li>
-                        <li id="skill-2">Python</li>
-                        <li id="skill-3">Javascript</li>
-                        <li id="skill-4">C#</li>
-                        <li id="skill-5">HTML</li>
-                        <li id="skill-6">CSS</li>
-                        <li id="skill-7">PostgreeSQL, Firebird e MySQL</li>
-                    </ul>
-                </div>
-                <div class="skills-column">
-                    <h3>Soft Skills</h3>
-                    <ul class="skills">
-                        <li id="skill-8">Diagnóstico e Resolução de Problemas</li>
-                        <li id="skill-9">Resolução de Problemas Técnicos Complexos</li>
-                        <li id="skill-10">Comunicação Técnica Eficaz</li>
-                        <li id="skill-11">Capacidade de Aprendizagem Rápida</li>
-                        <li id="skill-12">Adaptação a Ambientes Dinâmicos</li>
-                        <li id="skill-13">Proatividade e Iniciativa</li>
-                        <li id="skill-14">Colaboração em Equipe Multidisciplinar</li>
-                    </ul>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-en="Hi, I'm Gabriel Rodrigues" data-pt="Olá, eu sou Gabriel Rodrigues">
+                        Hi, I'm Gabriel Rodrigues
+                    </h1>
+                    <p class="subtitle" data-en="Software Developer" data-pt="Desenvolvedor de Software">
+                        Software Developer
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-        
 
-        <section class="section">
-            <h2 id="education-title">Educação</h2>
-            <ul class="education">
-                <li>
-                    <h3 id="degree-title-1">Graduação em Análise e Desenvolvimento de Sistemas</h3>
-                    <p id="degree-institution-1">UniBF</p>
-                    <p id="degree-duration-1">2022 - 2024</p>
-                </li>
-                    <li>
-                        <h3 id="degree-title-2">Análise de Dados do Google</h3>
-                        <p id="degree-institution-2">Google - Coursera</p>
-                        <p id="degree-description-2">Desenvolvi habilidades em análise de dados, incluindo conceitos de dados, SQL, visualização com Tableau, e programação em R. Aprendi a organizar, limpar e preparar dados para análise, aplicar soluções de problemas baseadas em dados e comunicar insights de forma eficaz.</p>
-                        <p id="degree-duration-2">2024</p>
-                    </li>
-                    <li>
-                        <h3 id="degree-title-3">Fundamentos do Suporte Técnico (Google)</h3>
-                        <p id="degree-institution-3">Google - Coursera</p>
-                        <p id="degree-description-3">Desenvolvi habilidades essenciais para uma função de suporte de TI, abrangendo tópicos como hardware, sistemas operacionais (Windows e Linux), redes de computadores, administração de sistemas e segurança de TI. Aprendi a solucionar problemas técnicos, gerenciar infraestrutura, usar ferramentas de rede e segurança, e aplicar metodologias para garantir a proteção e continuidade dos serviços de TI.</p>
-                        <p id="degree-duration-3">2024</p>
-                    </li>
-            </ul>
+        <section id="about" class="about">
+            <div class="container">
+                <h2 data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-en="Hello! I'm Gabriel, a passionate software developer with a keen interest in creating innovative technological solutions. I thrive on challenging projects that push the boundaries of what's possible." 
+                           data-pt="Olá! Eu sou Gabriel, um desenvolvedor de software apaixonado com grande interesse em criar soluções tecnológicas inovadoras. Me destaco em projetos desafiadores que expandem os limites do possível.">
+                            Hello! I'm Gabriel, a passionate software developer with a keen interest in creating innovative technological solutions. I thrive on challenging projects that push the boundaries of what's possible.
+                        </p>
+                        <p data-en="My expertise lies in developing robust, scalable applications that solve real-world problems." 
+                           data-pt="Minha especialidade está no desenvolvimento de aplicações robustas e escaláveis que resolvem problemas do mundo real.">
+                            My expertise lies in developing robust, scalable applications that solve real-world problems.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/profile.txt" alt="Gabriel Rodrigues">
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
 
-    <script>
-        let language = 'pt';
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 data-en="Skills" data-pt="Habilidades">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <h3 data-en="Programming" data-pt="Programação">Programming</h3>
+                        <p data-en="Python, JavaScript, Java, C++, Delphi" data-pt="Python, JavaScript, Java, C++, Delphi">Python, JavaScript, Java, C++, Delphi</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 data-en="Web Technologies" data-pt="Tecnologias Web">Web Technologies</h3>
+                        <p data-en="React, Node.js, HTML5, CSS3" data-pt="React, Node.js, HTML5, CSS3">React, Node.js, HTML5, CSS3</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h3 data-en="Databases" data-pt="Bancos de Dados">Databases</h3>
+                        <p data-en="MySQL, MongoDB, PostgreSQL, Firebird" data-pt="MySQL, MongoDB, PostgreSQL, Firebird">MySQL, MongoDB, PostgreSQL, Firebird</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-tools"></i>
+                        <h3 data-en="Tools" data-pt="Ferramentas">Tools</h3>
+                        <p data-en="Git, Docker, AWS, CI/CD" data-pt="Git, Docker, AWS, CI/CD">Git, Docker, AWS, CI/CD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        const translations = {
-            pt: {
-                experienceTitle: "Experiência",
-                tagline: "Desenvolvedor de Software e Especialista em TI",
-                job1Title: "Técnico de TI",
-                job1Description: "Gerenciamento de redes, instalação de software, suporte técnico.",
-                job1Company: "JGM Serviços - Rio de Janeiro",
-                job1Duration: "Setembro de 2022 - Março de 2023",
-                job2Title: "Estagiário de TI",
-                job2Description: "Suporte a hardware e software, manutenção de sistemas.",
-                job2Company: "Clínicas Reunidas São Víctor",
-                job2Duration: "Agosto de 2021 - Fevereiro de 2022",
-                skillsTitle: "Habilidades",
-                skill1: "Delphi",
-                skill2: "Python",
-                skill3: "Javascript",
-                skill4: "C#",
-                skill5: "HTML",
-                skill6: "CSS",
-                skill7: "PostgreeSQL, Firebird e MySQL",
-                skill8: "Resolução de Problemas Técnicos Complexos",
-                skill9: "Comunicação Técnica Eficaz",
-                skill10: "Gestão de Processos e Organização",
-                skill11: "Capacidade de Aprendizagem Rápida",
-                skill12: "Adaptação a Ambientes Dinâmicos",
-                skill13: "Proatividade e Iniciativa",
-                skill14: "Colaboração em Equipe Multidisciplinar",
-                educationTitle: "Educação",
-                degreeTitle1: "Graduação em Análise e Desenvolvimento de Sistemas",
-                degreeInstitution1: "Universidade XYZ",
-                degreeDuration1: "2019 - 2023"
-            },
-            en: {
-                experienceTitle: "Experience",
-                tagline: "Backend Developer and IT Expert",
-                job1Title: "IT Technician",
-                job1Description: "Network management, software installation, technical support.",
-                job1Company: "JGM Services - Rio de Janeiro",
-                job1Duration: "September 2022 - March 2023",
-                job2Title: "IT Intern",
-                job2Description: "Hardware and software support, system maintenance.",
-                job2Company: "Clínicas Reunidas São Víctor",
-                job2Duration: "August 2021 - February 2022",
-                skillsTitle: "Skills",
-                skill1: "Delphi",
-                skill2: "Python",
-                skill3: "Javascript",
-                skill4: "C#",
-                skill5: "HTML",
-                skill6: "CSS",
-                skill7: "PostgreeSQL, Firebird and MySQL",
-                skill8: "Complex Technical Problem Solving",
-                skill9: "Effective Technical Communication",
-                skill10: "Process Management and Organization",
-                skill11: "Rapid Learning Ability",
-                skill12: "Adaptability to Dynamic Environments",
-                skill13: "Proactivity and Initiative",
-                skill14: "Collaboration in Cross-functional Teams",
-                educationTitle: "Education",
-                degreeTitle1: "Bachelor's in System Analysis and Development",
-                degreeInstitution1: "XYZ University",
-                degreeDuration1: "2019 - 2023"
-            }
-        };
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fas fa-folder-open project-icon"></i>
+                                <a href="https://github.com/Jekzx/visualizarTitckets" class="github-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <h3 data-en="Project Name" data-pt="Nome do Projeto">Project Name</h3>
+                            <p class="project-description" data-en="Brief description of the project and its main features. What problems does it solve?" 
+                               data-pt="Breve descrição do projeto e suas principais características. Quais problemas ele resolve?">
+                                Brief description of the project and its main features. What problems does it solve?
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Delphi</span>
+                                <span class="tech-tag">Firebird</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fas fa-folder-open project-icon"></i>
+                                <a href="#" class="github-link" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <h3 data-en="Project Name" data-pt="Nome do Projeto">Project Name</h3>
+                            <p class="project-description" data-en="Brief description of the project and its main features. What problems does it solve?" 
+                               data-pt="Breve descrição do projeto e suas principais características. Quais problemas ele resolve?">
+                                Brief description of the project and its main features. What problems does it solve?
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fas fa-folder-open project-icon"></i>
+                                <a href="#" class="github-link" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <h3 data-en="Project Name" data-pt="Nome do Projeto">Project Name</h3>
+                            <p class="project-description" data-en="Brief description of the project and its main features. What problems does it solve?" 
+                               data-pt="Breve descrição do projeto e suas principais características. Quais problemas ele resolve?">
+                                Brief description of the project and its main features. What problems does it solve?
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        function switchLanguage() {
-            language = (language === 'pt') ? 'en' : 'pt';
-            updateContent();
-        }
-
-        function updateContent() {
-            document.getElementById("experience-title").textContent = translations[language].experienceTitle;
-            document.getElementById("tagline").textContent = translations[language].tagline;
-            document.getElementById("job-title-1").textContent = translations[language].job1Title;
-            document.getElementById("job-description-1").textContent = translations[language].job1Description;
-            document.getElementById("job-company-1").textContent = translations[language].job1Company;
-            document.getElementById("job-duration-1").textContent = translations[language].job1Duration;
-            document.getElementById("job-title-2").textContent = translations[language].job2Title;
-            document.getElementById("job-description-2").textContent = translations[language].job2Description;
-            document.getElementById("job-company-2").textContent = translations[language].job2Company;
-            document.getElementById("job-duration-2").textContent = translations[language].job2Duration;
-            document.getElementById("skills-title").textContent = translations[language].skillsTitle;
-            document.getElementById("skill-1").textContent = translations[language].skill1;
-            document.getElementById("skill-2").textContent = translations[language].skill2;
-            document.getElementById("skill-3").textContent = translations[language].skill3;
-            document.getElementById("skill-4").textContent = translations[language].skill4;
-            document.getElementById("skill-5").textContent = translations[language].skill5;
-            document.getElementById("skill-6").textContent = translations[language].skill6;
-            document.getElementById("skill-7").textContent = translations[language].skill7;
-            document.getElementById("skill-8").textContent = translations[language].skill8;
-            document.getElementById("skill-9").textContent = translations[language].skill9;
-            document.getElementById("skill-10").textContent = translations[language].skill10;
-            document.getElementById("skill-11").textContent = translations[language].skill11;
-            document.getElementById("skill-12").textContent = translations[language].skill12;
-            document.getElementById("skill-13").textContent = translations[language].skill13;
-            document.getElementById("skill-14").textContent = translations[language].skill14;
-            document.getElementById("education-title").textContent = translations[language].educationTitle;
-            document.getElementById("degree-title-1").textContent = translations[language].degreeTitle1;
-            document.getElementById("degree-institution-1").textContent = translations[language].degreeInstitution1;
-            document.getElementById("degree-duration-1").textContent = translations[language].degreeDuration1;
-        }
-    </script>
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 data-en="Certifications" data-pt="Certificações">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <a href="https://www.credly.com/badges/d5a2dfa1-243f-4a35-8bae-2bc2008ae6c8" class="certification-link" target="_blank">
+                            <div class="certification-badge">
+                                <img src="images/cert1.png" alt="Data Analytics Certificate">
+                            </div>
+                            <div class="certification-details">
+                                <h3 data-en="Data Analytics Certificate" data-pt="Certificado de Análise de Dados">Data Analytics Certificate</h3>
+                                <p class="issuer" data-en="IBM" data-pt="IBM">IBM</p>
+                                <p class="date" data-en="Issued: January 2023" data-pt="Emitido: Janeiro 2023">Issued: January 2023</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Add more certification cards as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
