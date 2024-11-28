@@ -130,7 +130,7 @@ function toggleLanguage() {
     // Update localStorage
     localStorage.setItem('language', newLang);
     
-    // Update language toggle button
+    // Update language toggle button state
     const languageToggleBtn = document.getElementById('language-toggle-btn');
     languageToggleBtn.classList.toggle('pt');
     
@@ -172,6 +172,54 @@ window.toggleLanguage = toggleLanguage;
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    // Smooth scroll function
+    function smoothScroll(target) {
+        const element = document.querySelector(target);
+        if (element) {
+            // Find the first heading within the section or the section itself
+            const heading = element.querySelector('h2') || element;
+            
+            // Scroll to the heading with some offset to account for fixed header
+            const offset = 70; // Adjust based on your header height
+            const elementPosition = heading.getBoundingClientRect().top + window.pageYOffset;
+            
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    // Ensure mobile menu toggle works
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu and scroll to section when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                
+                // Get the href attribute
+                const target = link.getAttribute('href');
+                
+                // Close mobile menu
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+                
+                // Smooth scroll to section
+                smoothScroll(target);
+            });
+        });
+    }
+
+    // Existing language toggle initialization
     const savedLang = localStorage.getItem('language') || 'en';
     
     // Update language toggle button state
@@ -183,24 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     translatePage(savedLang);
-    updateLanguageToggleButton(savedLang);
-});
-
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navMenu = document.querySelector('.nav-menu');
-
-mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when a nav link is clicked
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
 });
 
 // Mobile Menu
