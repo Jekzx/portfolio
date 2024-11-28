@@ -10,17 +10,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo" data-translate="logoName">Gabriel Rodrigues</div>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home" data-translate="logoText">Gabriel Rodrigues</a>
+            </div>
+            <div class="nav-controls">
+                <div class="language-toggle">
+                    <button id="language-toggle-btn" onclick="toggleLanguage()">
+                        <span class="lang-pt">PT</span>
+                        <span class="lang-en">EN</span>
+                    </button>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="#home" data-translate="navHome">Home</a></li>
                 <li><a href="#about" data-translate="navAbout">About</a></li>
                 <li><a href="#skills" data-translate="navSkills">Skills</a></li>
                 <li><a href="#projects" data-translate="navProjects">Projects</a></li>
                 <li><a href="#contact" data-translate="navContact">Contact</a></li>
-                <li class="language-toggle">
-                    <button onclick="toggleLanguage()" data-en="PT" data-pt="EN">PT</button>
-                </li>
             </ul>
         </nav>
     </header>

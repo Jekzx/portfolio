@@ -124,21 +124,25 @@ const translations = {
 
 // Language Switching Functionality
 function toggleLanguage() {
-    const currentLang = getCurrentLanguage();
+    const currentLang = localStorage.getItem('language') || 'en';
     const newLang = currentLang === 'en' ? 'pt' : 'en';
     
-    // Update language in localStorage
+    // Update localStorage
     localStorage.setItem('language', newLang);
     
-    // Apply translations
-    applyTranslations(newLang);
+    // Update language toggle button
+    const languageToggleBtn = document.getElementById('language-toggle-btn');
+    languageToggleBtn.classList.toggle('pt');
+    
+    // Translate all elements
+    translatePage(newLang);
 }
 
 function getCurrentLanguage() {
     return localStorage.getItem('language') || 'en';
 }
 
-function applyTranslations(lang) {
+function translatePage(lang) {
     // Update page title
     document.title = translations[lang].pageTitle;
 
@@ -156,9 +160,6 @@ function applyTranslations(lang) {
         const waMessage = waContact.getAttribute(`data-wa-${lang}`);
         waContact.href = `https://wa.me/+5521995852036?text=${waMessage}`;
     }
-
-    // Update language toggle button
-    updateLanguageToggleButton(lang);
 }
 
 function updateLanguageToggleButton(lang) {
@@ -171,17 +172,35 @@ window.toggleLanguage = toggleLanguage;
 
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = getCurrentLanguage();
+    const savedLang = localStorage.getItem('language') || 'en';
     
-    // Set initial WhatsApp link
-    const waContact = document.querySelector('.whatsapp-contact');
-    if (waContact) {
-        const waMessage = waContact.getAttribute(`data-wa-${savedLang}`);
-        waContact.href = `https://wa.me/+5521995852036?text=${waMessage}`;
+    // Update language toggle button state
+    const languageToggleBtn = document.getElementById('language-toggle-btn');
+    if (savedLang === 'pt') {
+        languageToggleBtn.classList.add('pt');
+    } else {
+        languageToggleBtn.classList.remove('pt');
     }
     
-    applyTranslations(savedLang);
+    translatePage(savedLang);
     updateLanguageToggleButton(savedLang);
+});
+
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when a nav link is clicked
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
 
 // Mobile Menu

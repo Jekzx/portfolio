@@ -28,46 +28,154 @@ body {
 }
 
 /* Header and Navigation */
-header {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
     z-index: 1000;
     background-color: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(10px);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav .logo {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-nav ul li a {
-    color: var(--text-primary);
+.logo a {
+    color: #64ffda;
+    font-weight: bold;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    color: #ccd6f6;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: var(--accent-color);
+.nav-menu a:hover {
+    color: #64ffda;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #64ffda;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+}
+
+#language-toggle-btn {
+    background-color: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#language-toggle-btn .lang-pt,
+#language-toggle-btn .lang-en {
+    display: inline-block;
+}
+
+#language-toggle-btn .lang-pt {
+    display: none;
+}
+
+#language-toggle-btn.pt .lang-pt {
+    display: inline-block;
+}
+
+#language-toggle-btn.pt .lang-en {
+    display: none;
+}
+
+#language-toggle-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(10, 25, 47, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 2.5rem 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    .language-toggle {
+        margin-right: 1rem;
+    }
+
+    #language-toggle-btn {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Sections */
@@ -380,10 +488,6 @@ footer {
 
     .hero-content h2 {
         font-size: 2rem;
-    }
-
-    nav ul {
-        display: none; /* Will be replaced with mobile menu later */
     }
 
     .container {
