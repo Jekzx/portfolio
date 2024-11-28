@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Gabriel Rodrigues - Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" data-translate="logoName">Gabriel Rodrigues</div>
+            <ul>
+                <li><a href="#home" data-translate="navHome">Home</a></li>
+                <li><a href="#about" data-translate="navAbout">About</a></li>
+                <li><a href="#skills" data-translate="navSkills">Skills</a></li>
+                <li><a href="#projects" data-translate="navProjects">Projects</a></li>
+                <li><a href="#contact" data-translate="navContact">Contact</a></li>
+                <li class="language-toggle">
+                    <button onclick="toggleLanguage()" data-en="PT" data-pt="EN">PT</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 data-translate="heroTitle">Gabriel Rodrigues</h1>
+                <h2 data-translate="heroSubtitle">Software Developer</h2>
+                <p data-translate="heroDescription">Crafting innovative solutions with code, bridging creativity and technology.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Jekzx" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gabrielsrodrigues1/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:gabrielrodrigues23@protonmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="aboutSectionTitle">About Me</h2>
+                <div class="about-content card">
+                    <div class="about-text">
+                        <p data-translate="aboutParagraph1">I specialize in backend development with Python but also enjoy working across the stack with tools like JavaScript, TypeScript, and React to build modern web applications. I have experience designing and optimizing SQL and NoSQL databases and a growing interest in AI and Machine Learning for creating smart, predictive systems. I also work with Delphi, using it to develop desktop applications when the need arises.</p>
+                        <p data-translate="aboutParagraph2">I aim for clean, minimalist designs that make life easier for users. While my main focus is backend development, I like to think of myself as a flexible full-stack developer, ready to tackle challenges from coding to deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="skillsSectionTitle">Skills</h2>
+                <div id="skills" class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h3 data-translate="skillPythonTitle">Python</h3>
+                        <p data-translate="skillPythonDescription">Advanced backend development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h3 data-translate="skillJavaScriptTitle">JavaScript</h3>
+                        <p data-translate="skillJavaScriptDescription">Frontend and full-stack development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3 data-translate="skillSQLTitle">SQL & NoSQL</h3>
+                        <p data-translate="skillSQLDescription">Database design and optimization</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3 data-translate="skillReactTitle">React</h3>
+                        <p data-translate="skillReactDescription">Modern web application development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h3 data-translate="skillAITitle">AI & Machine Learning</h3>
+                        <p data-translate="skillAIDescription">Intelligent system design and predictive modeling</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-desktop"></i>
+                        <h3 data-translate="skillDelphiTitle">Delphi</h3>
+                        <p data-translate="skillDelphiDescription">Desktop application development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3 data-translate="skillDataAnalysisTitle">Data Analysis</h3>
+                        <p data-translate="skillDataAnalysisDescription">Statistical analysis and data visualization</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3 data-translate="skillCloudTitle">Cloud Services</h3>
+                        <p data-translate="skillCloudDescription">AWS and Azure infrastructure</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="projectsSectionTitle">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project1.jpg" alt="Ticket Management System">
+                        </div>
+                        <div class="project-content">
+                            <h3 data-translate="project1Title">Ticket Management System</h3>
+                            <p data-translate="project1Description">A comprehensive ticket management system with bilingual support, enabling efficient tracking and resolution of support tickets.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Delphi</span>
+                                <span class="tech-tag">FireDAC</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GabrielRodriguesDev/Ticket-Management-System" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> <span data-translate="projectGithubLink">GitHub</span>
+                                </a>
+                                <a href="https://jekzx.github.io/Tickets-viewer/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> <span data-translate="projectDemoLink">Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project2.jpg" alt="Smart AI Task Manager">
+                        </div>
+                        <div class="project-content">
+                            <h3 data-translate="project2Title">Smart AI Task Manager</h3>
+                            <p data-translate="project2Description">An intelligent task management application leveraging AI to prioritize and optimize personal productivity workflows.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> <span data-translate="projectGithubLink">GitHub</span>
+                                </a>
+                                <a href="https://jekzx.github.io/smartai-task-manager/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> <span data-translate="projectDemoLink">Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project3.jpg" alt="Smart Home Automation System">
+                        </div>
+                        <div class="project-content">
+                            <h3 data-translate="project3Title">Smart Home Automation System</h3>
+                            <p data-translate="project3Description">A comprehensive IoT-based smart home automation system built with Python, utilizing MQTT for device communication and providing a user-friendly interface for home device control.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Jekzx/smart-home" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> <span data-translate="projectGithubLink">GitHub</span>
+                                </a>
+                                <a href="https://jekzx.github.io/smart-home/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> <span data-translate="projectDemoLink">Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="contactSectionTitle">Contact Me</h2>
+                <div class="contact-form card">
+                    <a href="https://wa.me/+5521995852036?text=Hello%20Gabriel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20chat%20about%20potential%20opportunities." 
+                       class="whatsapp-contact" 
+                       target="_blank" 
+                       data-translate="contactWhatsappButton"
+                       data-wa-en="Hello%20Gabriel%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20chat%20about%20potential%20opportunities."
+                       data-wa-pt="Ol%C3%A1%20Gabriel%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20potenciais.">
+                        <i class="fab fa-whatsapp"></i> Contact me on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-translate="footerCopyright">&copy; 2023 Gabriel Rodrigues. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
